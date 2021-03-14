@@ -20,11 +20,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.swift_version = '5.3'
   s.cocoapods_version = '>= 1.9.3'
-  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.source       = { :git => "https://github.com/zendesk/messaging_sdk_ios.git", :tag => s.version }
   s.vendored_frameworks = 'MessagingSDK.xcframework'
   s.preserve_paths = 'MessagingSDK.xcframework', 'MessagingSDK.dSYMs/*.dSYM'
-  s.dependency 'ZendeskMessagingAPISDK', '~> 3.8.1'
-  s.dependency 'ZendeskCommonUISDK', '~> 6.1.0'
 end
